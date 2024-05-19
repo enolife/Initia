@@ -99,7 +99,7 @@ Storage=persistent
 EOF
 
 echo -e '\n\e[42mDownloading a snapshot\e[0m\n' && sleep 1
-aria2c -x 10 -s 10 -k 1M -o latest_snapshot.tar.lz4 https://snapshots.nodes.guru/initia/latest_snapshot.tar.lz4
+aria2c -x 10 -s 10 -k 1M -o latest_snapshot.tar.lz4 https://snapshots.kzvn.xyz/initia/initiation-1_latest.tar.lz4
 lz4 -c -d latest_snapshot.tar.lz4 | tar -x -C $DAEMON_HOME
 wget -O $DAEMON_HOME/config/addrbook.json https://snapshots.nodes.guru/initia/addrbook.json
 
